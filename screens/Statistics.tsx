@@ -1,24 +1,17 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-import GameButton from "../components/GameButton";
+import BackButton from "../components/BackButton";
 
 const Statistics = (props: {}) => {
   return (
     <View>
-      <View style={styles.buttonContainer}>
-          <GameButton
-            onPress={() => props.navigation.navigate("Home")}
-            title="Back"
-          />
-      </View>
+      <BackButton />
       <Text>Statistics</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  buttonContainer: {},
-});
+const styles = StyleSheet.create({});
 
 export default Statistics;

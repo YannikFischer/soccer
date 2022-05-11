@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import InputField from "../components/InputField";
-import GameButton from "../components/GameButton";
+import BackButton from "../components/BackButton";
 
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
@@ -16,12 +16,8 @@ const PlayGameScreen = (props: { navigation: any }) => {
         colors={["#8d03a1", "#11157f"]}
         style={styles.background}
       />
-      <View style={styles.buttonContainer}>
-          <GameButton
-            onPress={() => props.navigation.navigate("Home")}
-            title="Back"
-          />
-      </View>
+
+      <BackButton />
       <View style={styles.upperContainer}>
         <Text style={styles.titles}>Team 1</Text>
         <InputField />
@@ -59,10 +55,6 @@ const styles = StyleSheet.create({
     marginTop: windowHeight * 0.03,
   },
   bottomContainer: {},
-  buttonContainer: {
-    width: '2%',
-    
-  },
 });
 
 export default PlayGameScreen;
