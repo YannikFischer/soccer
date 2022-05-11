@@ -3,6 +3,7 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import InputField from "../components/InputField";
 import BackButton from "../components/BackButton";
+import GameButton from "../components/GameButton";
 
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
