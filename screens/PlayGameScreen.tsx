@@ -11,8 +11,8 @@ const PlayGameScreen = (props: { navigation: any }) => {
   return (
     <View style={styles.main}>
       <LinearGradient
-        start={{ x: 0, y: 1 }}
-        end={{ x: 1.25, y: 0 }}
+        start={{ x: 0.5, y: 1.25 }}
+        end={{ x: 2, y: 1 }}
         colors={["#8d03a1", "#11157f"]}
         style={styles.background}
       />
@@ -27,6 +27,10 @@ const PlayGameScreen = (props: { navigation: any }) => {
       <View style={styles.bottomContainer}>
         <Text style={styles.titles}>Game Mode</Text>
       </View>
+      <GameButton
+        onPress={() => props.navigation.navigate("InGame")}
+        title="Start Game"
+      />
     </View>
   );
 };

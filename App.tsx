@@ -8,6 +8,7 @@ import HomeScreen from "./screens/HomeScreen";
 import PlayGameScreen from "./screens/PlayGameScreen";
 import Statistics from "./screens/Statistics";
 import Settings from "./screens/Settings";
+import InGameScreen from "./screens/InGameScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="PlayGame" component={PlayGameScreen} />
         <Stack.Screen name="Statistics" component={Statistics} />
         <Stack.Screen name="Settings" component={Settings} />
+        <Stack.Screen name="InGame" component={InGameScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
