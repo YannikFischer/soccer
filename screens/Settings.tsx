@@ -11,13 +11,14 @@ import BackButton from "../components/BackButton";
 const Settings = (props: { navigation: any }) => {
   return (
     <View>
-      <BackButton />
       <LinearGradient
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0 }}
         colors={["#8d03a1", "#11157f"]}
         style={styles.background}
       />
+
+      <BackButton />
       <View style={styles.main}>
         <Text style={styles.titles}>Volume</Text>
         <FunctionButton onPress={undefined} title="Placeholder" />
@@ -28,7 +29,6 @@ const Settings = (props: { navigation: any }) => {
         <FunctionButton onPress={undefined} title="Placeholder" />
         <FunctionButton onPress={undefined} title="Placeholder" />
       </View>
-      <Text>Settings</Text>
     </View>
   );
 };
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     marginTop: windowHeight * 0.05,
     alignSelf: "center",
   },
-  buttonContainer: {},
 });
 
 export default Settings;
