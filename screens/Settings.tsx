@@ -6,23 +6,19 @@ import FunctionButton from "../components/FunctionButton";
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
 
-import GameButton from "../components/GameButton";
+import BackButton from "../components/BackButton";
 
 const Settings = (props: { navigation: any }) => {
   return (
     <View>
-      <View style={styles.buttonContainer}>
-        <GameButton
-          onPress={() => props.navigation.navigate("Home")}
-          title="Back"
-        />
-      </View>
       <LinearGradient
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0 }}
         colors={["#8d03a1", "#11157f"]}
         style={styles.background}
       />
+
+      <BackButton />
       <View style={styles.main}>
         <Text style={styles.titles}>Volume</Text>
         <FunctionButton onPress={undefined} title="Placeholder" />
@@ -33,13 +29,6 @@ const Settings = (props: { navigation: any }) => {
         <FunctionButton onPress={undefined} title="Placeholder" />
         <FunctionButton onPress={undefined} title="Placeholder" />
       </View>
-      <View style={styles.buttonContainer}>
-        <GameButton
-          onPress={() => props.navigation.navigate("Home")}
-          title="Back"
-        />
-      </View>
-      <Text>Settings</Text>
     </View>
   );
 };
@@ -64,7 +53,6 @@ const styles = StyleSheet.create({
     marginTop: windowHeight * 0.05,
     alignSelf: "center",
   },
-  buttonContainer: {},
 });
 
 export default Settings;
