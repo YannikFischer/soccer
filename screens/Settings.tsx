@@ -2,6 +2,7 @@ import { View, Text, Dimensions, StyleSheet } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import FunctionButton from "../components/FunctionButton";
+import DropDown from "../components/Dropdown";
 
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
@@ -23,11 +24,11 @@ const Settings = (props: { navigation: any }) => {
         <Text style={styles.titles}>Volume</Text>
         <FunctionButton onPress={undefined} title="Placeholder" />
         <Text style={styles.titles}>Goal Reaction</Text>
-        <FunctionButton onPress={undefined} title="Placeholder" />
-        <FunctionButton onPress={undefined} title="Placeholder" />
+        <DropDown />
+        <DropDown />
         <Text style={styles.titles}>Win Reaction</Text>
-        <FunctionButton onPress={undefined} title="Placeholder" />
-        <FunctionButton onPress={undefined} title="Placeholder" />
+        <DropDown />
+        <DropDown />
       </View>
     </View>
   );
