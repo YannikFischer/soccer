@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Pressable, Dimensions } from "react-native";
-import { Button, Menu, Divider, Provider } from "react-native-paper";
-import { Item } from "react-native-paper/lib/typescript/components/List/List";
+import { Button, Menu, Provider } from "react-native-paper";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -19,11 +18,30 @@ const DropDown = () => {
           visible={visible}
           onDismiss={closeMenu}
           anchor={<Button onPress={openMenu}>Show menu</Button>}
-          style={styles.item}
+          style={styles.menu}
+          contentStyle={styles.menu_content}
         >
-          <Menu.Item onPress={() => {}} title="Item 1" />
-          <Menu.Item onPress={() => {}} title="Item 2" />
-          <Menu.Item onPress={() => {}} title="Item 3" />
+          <Menu.Item
+            style={styles.item}
+            contentStyle={styles.item_content}
+            titleStyle={styles.item_title}
+            onPress={() => {}}
+            title="Item 1"
+          />
+          <Menu.Item
+            style={styles.item}
+            contentStyle={styles.item_content}
+            titleStyle={styles.item_title}
+            onPress={() => {}}
+            title="Item 2"
+          />
+          <Menu.Item
+            style={styles.item}
+            contentStyle={styles.item_content}
+            titleStyle={styles.item_title}
+            onPress={() => {}}
+            title="Item 3"
+          />
         </Menu>
       </View>
     </Provider>
@@ -32,10 +50,7 @@ const DropDown = () => {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
-    alignItems: "center",
-  },
-  item: {
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 12,
@@ -45,7 +60,15 @@ const styles = StyleSheet.create({
     opacity: 0.8,
     width: windowWidth * 0.8,
   },
-  text: {
+  menu: {},
+  menu_content: {
+    backgroundColor: "#bcbbbba7",
+    opacity: 0.8,
+    width: windowWidth * 0.8,
+  },
+  item: {},
+  item_content: {},
+  item_title: {
     fontSize: 20,
     lineHeight: 30,
     fontWeight: "bold",
